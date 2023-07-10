@@ -10,17 +10,16 @@ namespace GenericsAssignment
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Please enter the first number");
-            float num1 = Convert.ToInt32(Console.ReadLine());
-
-            Console.WriteLine("Please enter the second number");
-            float num2 = Convert.ToInt32(Console.ReadLine());
-
-            Console.WriteLine("Please enter the third number");
-            float num3 = Convert.ToInt32(Console.ReadLine());
-
-            float val = Maximum.MaximumFloatNumber(num1, num2, num3);
-            Console.WriteLine("{0} IS GREATER  NUMBER.", val);
+            Maximum maximum = new Maximum();
+            Console.WriteLine("Enter the FirstNumber");
+            string firstvalue = Console.ReadLine();
+            Console.WriteLine("Enter the SecondNumber");
+            string secondvalue = Console.ReadLine();
+            Console.WriteLine("Enter the ThirdNumber");
+            string thirdvalue = Console.ReadLine();
+            string val = maximum.Number(firstvalue, secondvalue, thirdvalue);
+            Console.WriteLine("{0} is largest number ", val);
+            Console.ReadLine();
         }
     }
 }
